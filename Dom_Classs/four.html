@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Dom | Prac</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="languages">
+        <li>Java</li>
+    </ul>
+</body>
+<script>
+    //Add Element 1
+    function addLanguage(language){
+        const li =  document.createElement('li');
+        li.innerText = `${language}`
+        document.querySelector('.languages')
+        .appendChild(li);
+    }
+    addLanguage('Python');
+    addLanguage('Html');
+       //Add Element 2
+    function optimizeAddLang(lang){
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(lang));
+        document.querySelector('.languages').appendChild(li);
+    }
+    optimizeAddLang('Css');
+    ////Edit methods 1
+    const lang = document.querySelector('.languages');
+    lang.children[2].innerText = 'Sql';
+   ////Edit methods 2
+     const lang1 = document.querySelector('.languages');
+     const li1 = document.createElement('li');
+     li1.innerText = "ReactJs";
+    lang.children[1].replaceWith(li1);
+
+</script>
+</html>
