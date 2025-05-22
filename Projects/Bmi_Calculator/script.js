@@ -1,20 +1,3 @@
-// const form = document.querySelector('form');
-// form.addEventListener('submit',(e)=>{
-//     e.preventDefault();
-//     const heightval = parseInt(document.querySelector('#height').value);
-//     const weightval = parseInt(document.querySelector('#weight').value);
-//     const results = document.querySelector('#results');
-//     if(heightval === '' || heightval < 0 || isNaN(heightval)){
-//         results.innerHTML = `Please Provide Valid Height Value ${heightval}`;
-//     }
-//     if(weightval === '' || weightval < 0 || isNaN(weightval)){
-//         results.innerHTML = `Please Provide Valid Weight Value ${weightval}`;
-//     }
-//     else{
-//         const bm1 = (weightval / ((heightval * heightval) / 1000)).toFixed(2);
-//         results.innerHTML = `<span>${bm1}</span>`
-//     }
-// });
 const form = document.querySelector('form');
 
 form.addEventListener('submit', (e) => {
