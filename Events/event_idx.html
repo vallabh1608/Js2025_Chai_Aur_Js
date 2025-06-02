@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Page</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <h2>Living Beings</h2>
+    <ul id = "listAnimals">
+        <li ><img id = "Animals" width=200px src = "Animals.png" title="Animals"></img></li>
+        <li ><img id = "Birds" width=200px src = "Birds.png" title="Birds"></img></li>
+        <li ><img id = "Aqua" width=200px src = "Aqua_Animals.png" title="Aqua"></img></li>
+        <li ><img id = "insects" width=200px src = "Insects.png" title="Insects" ></img></li>
+        <li><a id = "google" href = "https://www.google.com">Google</a></li>
+    </ul>
+</body>
+<script>
+    // document.getElementById('Animals').onclick = function(){
+    //     alert("These are Animals");
+    // }
+    // document.querySelector('#Animals').addEventListener('click', (e)=>{
+    //     console.log("Animals Image Clicked");
+    // }, false);
+     document.querySelector('#listAnimals').addEventListener('click', (e)=>{
+        const removeit = e.target.parentNode;
+        removeit.remove();
+    },false);
+    //  document.querySelector('#Birds').addEventListener('click', (e)=>{
+    //     e.stopPropagation()
+    //     console.log("Birds Image Clicked");
+    // },false);
+    // document.querySelector("#google").addEventListener('click',(e)=>{
+    //     e.preventDefault();
+    // })
+</script>
+</html>
