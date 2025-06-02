@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous Functionality in js</title>
+</head>
+<body>
+    <h1>Chai Aur Code</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    // const sayhi = function(){
+    //     return "Hello vallabh";
+    // }
+    // const changeText = function(){
+    //     const ctext = document.querySelector('h1')
+    //     .innerHTML = sayhi();
+    // }
+    // let changeme;
+    // document.querySelector('#start').addEventListener('click',()=>{
+    //     changeme = setTimeout(changeText, 2000);
+    // });
+   
+    // document.querySelector('#stop').addEventListener('click',()=>{
+    //     clearTimeout(changeme);
+    //     console.log("stopped");  
+    // });
+    let interval;
+    document.querySelector("#start").addEventListener('click',()=>{
+        interval = setInterval(function(){
+        console.log("Vallabh",Date.now());
+
+    },2000)
+    });
+    document.querySelector('#stop').addEventListener('click',()=>{
+        clearInterval(interval);
+    });
+
+</script>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Color Changer</title>
+     <link rel="stylesheet" href = "../styles.css">
+</head>
+<body>
+     <nav>
+        <a href="/">Home</a>
+        <a href="https://www.linkedin.com/in/garini-vallabh-98b79427b/">My LinkedIn</a>
+    </nav>
+     <h1>Background Color Changer App</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    
+</body>
+<script>
+    const randomColor = function(){
+        const hexcode = '0123456789ABCDEF';
+        let colorCode = "#";
+        for(let i = 0; i < 6; i++){
+           let random = Math.floor(Math.random()*16);
+           colorCode += hexcode[random];
+        }
+        return colorCode;
+    }
+    let interval;
+    const startchangingColor = function(){
+         interval = setInterval(()=>{
+            document.body.style.backgroundColor = randomColor();
+        },1000);
+    }
+    const stopchangingColor = function(){
+        clearInterval(interval);
+    }
+    document.querySelector('#start').addEventListener('click', startchangingColor);
+    document.querySelector('#stop').addEventListener('click', stopchangingColor);
+</script>
+</html>
