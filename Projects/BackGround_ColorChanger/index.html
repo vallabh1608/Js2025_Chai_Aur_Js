@@ -28,12 +28,14 @@
     }
     let interval;
     const startchangingColor = function(){
-         interval = setInterval(()=>{
-            document.body.style.backgroundColor = randomColor();
-        },1000);
+        if(!interval){
+             interval = setInterval(()=>{
+            document.body.style.backgroundColor = randomColor()},1000);
+        }
     }
     const stopchangingColor = function(){
         clearInterval(interval);
+        interval = null;
     }
     document.querySelector('#start').addEventListener('click', startchangingColor);
     document.querySelector('#stop').addEventListener('click', stopchangingColor);
